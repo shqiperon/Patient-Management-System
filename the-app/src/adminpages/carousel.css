@@ -1,0 +1,30 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.carousel-slide {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.promotion-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.promotion-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.promotion-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

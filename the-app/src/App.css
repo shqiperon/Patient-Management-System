@@ -1,0 +1,140 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+
+/* show approved appoitnments and show lab appointments design*/
+
+.approved {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.approved::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.approved:hover::before {
+    opacity: 1;
+}
+
+.hover-effect {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.hover-effect:hover {
+    opacity: 1;
+}
+
+.approved-card-body {
+    transition: transform 0.8s ease;
+}
+
+.approved-card-body:hover {
+    transform: translateY(-10%);
+}
+
+.approved-card-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: aliceblue;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.card:hover .approved-card-text-overlay {
+    transform: translateY(-10%);
+    transition: transform 0.8s ease;
+}
+
+
+/*//////////////*/
+
+.appointments-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.appointments-container>div {
+    flex: 0 0 100%;
+    /* Each div takes full width on small screens */
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .appointments-container>div {
+        flex-basis: calc(50% - 10px);
+        /* Each div takes 50% width on medium screens and above */
+    }
+}
+
+@media (min-width: 992px) {
+    .appointments-container>div {
+        flex-basis: calc(33.33% - 10px);
+        /* Each div takes 33.33% width on large screens and above */
+    }
+}
+
+@media (min-width: 1200px) {
+    .appointments-container>div {
+        flex-basis: calc(25% - 10px);
+        /* Each div takes 25% width on extra-large screens and above */
+    }
+}
+
+
+/*///////////////////////////////// */
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
